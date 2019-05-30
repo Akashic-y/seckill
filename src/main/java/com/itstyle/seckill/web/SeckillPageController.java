@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSONObject;
-import com.itstyle.seckill.Application;
 import com.itstyle.seckill.common.entity.Result;
 import com.itstyle.seckill.common.entity.Seckill;
 import com.itstyle.seckill.common.utils.HttpClient;

@@ -1,5 +1,6 @@
 package com.itstyle.seckill.common.encrypt;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -84,9 +85,16 @@ public class SecurityRSA {
  
 	public static void main(String[] args) throws Exception {
         //创建目录
-		String pubfile = "d:/temp/pub.key";
-		String prifile = "d:/temp/pri.key";
- 
+		String pubfile = "/pub.key";
+		String prifile = "/pri.key";
+		File file = new File(pubfile);
+		File file2 = new File(prifile);
+        if(!file.exists()){
+		    file.createNewFile();
+		}
+        if(!file2.exists()){
+            file2.createNewFile();
+        }
 		makekeyfile(pubfile, prifile);
  
 		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(pubfile));
