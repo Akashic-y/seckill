@@ -1,8 +1,4 @@
-# 分布式秒杀系统
-
-交流群：529135840
-
-运行前一定要看文档说明：https://gitee.com/52itstyle/spring-boot-seckill/wikis
+# 分布式秒杀系统改进
 
 ## 推荐
 
@@ -48,7 +44,7 @@ http://localhost:8080/seckill/swagger-ui.html
 
 ## 友情提示
 
-由于工作原因，项目正在完善中（仅供参考），随时更新日志，有疑问请留言或者加群
+由于工作原因，项目正在完善中（仅供参考），随时更新日志，有疑问请留言
 
 
 #### 项目介绍
@@ -357,16 +353,6 @@ SpringBoot开发案例从0到1构建分布式秒杀系统，项目案例基本�
 
 [linux下redis设置密码登录](http://www.52itstyle.com/thread-20085-1-1.html "linux下redis设置密码登录")
 
-## 欢迎关注
-
-一个有温度的微信公众号，期待与你共同进步，分享美文，分享各种Java学习资源
-
-![输入图片说明](https://images.gitee.com/uploads/images/2018/0809/181043_76e4d5b8_87650.png "1234.png")
-
-
-## Python学习
-
-从零学Python：https://gitee.com/52itstyle/Python
 
 在线百度语音播报：https://gitee.com/52itstyle/baidu-speech
 
