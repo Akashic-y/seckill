@@ -7,13 +7,13 @@ socket = {
 	init : function() {
 		//userId：自行追加
 		if ('WebSocket' in window) {
-			webSocket = new WebSocket(basePath+'websocket/1'); 
+			webSocket = new WebSocket(basePath+'websocket/1000'); 
 		} 
 		else if ('MozWebSocket' in window) {
-			webSocket = new MozWebSocket(basePath+"websocket/1");
+			webSocket = new MozWebSocket(basePath+"websocket/1000");
 		} 
 		else {
-			webSocket = new SockJS(basePath+"sockjs/websocket");
+			webSocket = new SockJS(basePath+"sockjs/websocket/1000");
 		}
 		webSocket.onerror = function(event) {
 			alert("websockt连接发生错误，请刷新页面重试!")

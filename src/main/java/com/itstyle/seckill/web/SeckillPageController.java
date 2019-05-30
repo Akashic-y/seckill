@@ -9,6 +9,8 @@ import javax.jms.Destination;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.activemq.command.ActiveMQQueue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
@@ -19,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSONObject;
+import com.itstyle.seckill.Application;
 import com.itstyle.seckill.common.entity.Result;
 import com.itstyle.seckill.common.entity.Seckill;
 import com.itstyle.seckill.common.utils.HttpClient;
@@ -31,6 +34,8 @@ import com.itstyle.seckill.service.ISeckillService;
 @RequestMapping("/seckillPage")
 public class SeckillPageController {
 	
+    private final static Logger LOGGER = LoggerFactory.getLogger(SeckillPageController.class);
+    
 	@Autowired
 	private ISeckillService seckillService;
 	
@@ -73,6 +78,7 @@ public class SeckillPageController {
         //{"response":"1","evil_level":"0","err_msg":"OK"}
         JSONObject json = JSONObject.parseObject(msg);
         String response = (String) json.get("response");
+        LOGGER.info(msg);
         if("1".equals(response)){
         	//进入队列、假数据而已
         	Destination destination = new ActiveMQQueue("seckill.queue");
